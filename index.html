@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <title>Mindfulcare</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/all.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        scroll-behavior: smooth;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      .image-rotation-r {
+        z-index: -99;
+        animation: spin 50000ms linear infinite;
+      }
+
+      .image-rotation-l {
+        z-index: -99;
+        animation: spin 50000ms linear infinite reverse;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section Start -->
+    <section
+      id="hero"
+      class="px-4 sm:px-12 lg:px-32 py-12 sm:py-4 md:py-0 relative"
+    >
+      <div
+        class="lg:max-w-screen-lg mx-auto w-full flex flex-wrap flex-col-reverse md:flex-row items-center justify-center min-h-screen"
+      >
+        <div
+          class="w-full text-center md:text-start md:w-1/2 flex flex-col justify-center md:min-h-screen"
+        >
+          <h1
+            class="mb-5 lg:mb-10 text-balancer text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            Tetap <span class="text-emerald-600">Sehat</span> dan
+            <span class="text-emerald-600">Fokus</span>, Meski Lagi Sibuk
+            <span class="text-orange-400">Coding!</span>
+          </h1>
+          <p
+            class="mb-10 text-gray-600 lg:text-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            Sebagai mahasiswa IT, tekanan akademik dan rutinitas padat dapat
+            memengaruhi kesehatan mental. Kami hadir untuk membantu kamu
+            mengelola stres, kecemasan, dan tantangan lainnya.
+          </p>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <a
+              href="#"
+              class="text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-4 focus:outline-none focus:ring-emerald-400 font-medium rounded-xl hover:shadow-lg text-sm px-6 py-4 duration-500"
+              >Mulai Sekarang</a
+            >
+          </div>
+        </div>
+        <div
+          class="w-full md:w-1/2 flex justify-center lg:items-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <img
+            src="./images/image-hero.png"
+            alt="Gambar Hero"
+            class="mb-5 w-64 md:w-80 lg:w-auto h-auto"
+          />
+        </div>
+      </div>
+      <div class="">
+        <img
+          src="./images/circle-1.png"
+          class="absolute w-56 lg:w-auto top-20 -left-10 image-rotation-r"
+          alt="Circle Decoration 1"
+        />
+        <img
+          src="./images/circle-2.png"
+          class="absolute w-56 bottom-10 right-10 lg:right-20 image-rotation-l"
+          alt="Circle Decoration 2"
+        />
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Reasons Section Start -->
+    <section id="reasons" class="px-4 sm:px-12 lg:px-32 py-12">
+      <div
+        class="lg:max-w-screen-xl mx-auto flex flex-col items-center justify-center min-h-screen"
+      >
+        <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
+          <h2
+            class="mb-5 font-semibold text-emerald-600"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Alasan
+          </h2>
+          <p
+            class="mb-5 text-2xl md:text-3xl lg:text-4xl font-semibold"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+          >
+            Kenapa Sih Kamu Bisa Terkena Penyakit Mental
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-5 lg:gap-10 justify-center items-center">
+          <div
+            class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div class="flex items-center mb-3 lg:mb-5">
+              <span
+                class="text-2xl h-12 w-12 flex justify-center items-center bg-gray-100 rounded-full text-emerald-600 mr-3"
+              >
+                <i class="fa-regular fa-face-head-bandage"></i>
+              </span>
+              <h4 class="font-bold lg:text-lg">Tuntutan Belajar yang Berat</h4>
+            </div>
+            <p>
+              Kadang tugas dan ujian di jurusan IT bisa bikin kepala pusing.
+              Tugas yang nggak ada habisnya, coding yang nggak selesai-selesai,
+              dan deadline yang selalu datangnya mendekat.
+            </p>
+          </div>
+          <div
+            class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <div class="flex items-center mb-3 lg:mb-5">
+              <span
+                class="text-2xl h-12 w-12 flex justify-center items-center bg-gray-100 rounded-full text-emerald-600 mr-3"
+              >
+                <i class="fa-regular fa-face-sleeping"></i>
+              </span>
+              <h4 class="font-bold lg:text-lg">Kurang Tidur</h4>
+            </div>
+            <p>
+              Mahasiswa IT sering begadang buat ngoding atau ngurus tugas. Tidur
+              yang kurang bisa berdampak buruk buat kesehatan mental dan fisik.
+            </p>
+          </div>
+          <div
+            class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <div class="flex items-center mb-3 lg:mb-5">
+              <span
+                class="text-2xl h-12 w-12 flex justify-center items-center bg-gray-100 rounded-full text-emerald-600 mr-3"
+              >
+                <i class="fa-regular fa-face-spiral-eyes"></i>
+              </span>
+              <h4 class="font-bold lg:text-lg">Perasaan Overwhelmed</h4>
+            </div>
+            <p>
+              Terkadang, ngerasa kayak banyak banget hal yang harus dipelajari
+              dan nggak ada habisnya. Itu bisa nambah stres dan rasa cemas.
+            </p>
+          </div>
+          <div
+            class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+          >
+            <div class="flex items-center mb-3 lg:mb-5">
+              <span
+                class="text-2xl h-12 w-12 flex justify-center items-center bg-gray-100 rounded-full text-emerald-600 mr-3"
+              >
+                <i class="fa-regular fa-face-explode"></i>
+              </span>
+              <h4 class="font-bold lg:text-lg">Tuntutan untuk Terus Update</h4>
+            </div>
+            <p>
+              Teknologi selalu berkembang, dan mahasiswa IT merasa harus terus
+              update dengan hal baru. Kadang ini bikin merasa nggak cukup pinter
+              atau tertinggal.
+            </p>
+          </div>
+          <div
+            class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
+            <div class="flex items-center mb-3 lg:mb-5">
+              <span
+                class="text-2xl h-12 w-12 flex justify-center items-center bg-gray-100 rounded-full text-emerald-600 mr-3"
+              >
+                <i class="fa-regular fa-face-glasses"></i>
+              </span>
+              <h4 class="font-bold lg:text-lg">Perfeksionisme</h4>
+            </div>
+            <p>
+              Banyak mahasiswa IT yang pengen semua kodingan mereka tanpa bug
+              dan berjalan mulus. Kalau nggak berhasil, bisa bikin merasa nggak
+              cukup.
+            </p>
+          </div>
+          <div
+            class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="1000"
+          >
+            <div class="flex items-center mb-3 lg:mb-5">
+              <span
+                class="text-2xl h-12 w-12 flex justify-center items-center bg-gray-100 rounded-full text-emerald-600 mr-3"
+              >
+                <i class="fa-regular fa-face-worried"></i>
+              </span>
+              <h4 class="font-bold lg:text-lg">Kekhawatiran Masa Depan</h4>
+            </div>
+            <p>
+              Dengan banyaknya kompetisi di dunia kerja, mahasiswa IT sering
+              merasa khawatir tentang masa depan mereka dan apakah mereka cukup
+              siap buat menghadapi dunia kerja yang kompetitif.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Reasons Section End -->
+
+    <!-- Solutions Section Start -->
+    <section id="solutions" class="px-4 sm:px-12 lg:px-32 py-12 mb-20">
+      <div
+        class="lg:max-w-screen-lg mx-auto flex flex-col items-center justify-center min-h-screen"
+      >
+        <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
+          <h2
+            class="mb-5 font-semibold text-emerald-600"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Solusi
+          </h2>
+          <p
+            class="mb-5 text-2xl md:text-3xl lg:text-4xl font-semibold"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+          >
+            Yang Membantu Kamu Menghadapi Masalah Penyakit Mental
+          </p>
+        </div>
+        <!-- Pomodoro Timer -->
+        <div
+          class="flex flex-col-reverse md:flex-row md:gap-5 justify-center items-center mb-10 md:mb-20"
+        >
+          <div
+            class="flex justify-center flex-wrap w-full lg:w-1/2"
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div class="p-8 bg-emerald-600 rounded-xl shadow-xl">
+              <div class="section-container flex gap-4 justify-center">
+                <button
+                  id="focus"
+                  class="btn text-sm px-6 py-4 bg-red-700 text-white rounded-lg"
+                >
+                  Focus
+                </button>
+                <button
+                  id="shortbreak"
+                  class="btn text-sm px-6 py-4 bg-emerald-100 text-emerald-600 rounded-lg"
+                >
+                  Short Break
+                </button>
+                <button
+                  id="longbreak"
+                  class="btn text-sm px-6 py-4 bg-emerald-100 text-emerald-600 rounded-lg"
+                >
+                  Long Break
+                </button>
+              </div>
+              <div class="time-btn-container flex flex-col mt-8">
+                <span
+                  id="time"
+                  class="text-center text-white text-6xl font-semibold"
+                ></span>
+                <div class="btn-container flex justify-center gap-8 mt-4">
+                  <button
+                    id="btn-start"
+                    class="btn text-sm px-8 py-4 bg-emerald-800 text-white rounded-lg show"
+                  >
+                    Start
+                  </button>
+                  <button
+                    id="btn-pause"
+                    class="btn text-sm px-8 py-4 bg-emerald-400 text-white rounded-lg hide"
+                  >
+                    Pause
+                  </button>
+                  <button
+                    id="btn-reset"
+                    class="bg-transparent border-none text-white text-3xl hide"
+                  >
+                    <i class="fa-solid fa-rotate-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mb-10 md:mb-0 text-center md:text-start flex flex-col w-full lg:w-1/2"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <h2 class="mb-5 text-2xl lg:text-3xl font-semibold">
+              Manajemen Waktu dengan
+              <span class="text-orange-400">Teknik Pomodoro</span>
+            </h2>
+            <p class="text-gray-600 mb-3">
+              Mahasiswa IT bisa mengatur jadwal belajar dengan lebih terstruktur
+              agar nggak terlalu terbebani. Coba gunakan teknik Pomodoro, yaitu
+              bekerja selama 25 menit penuh, lalu istirahat selama 5 menit.
+            </p>
+            <p class="text-gray-600">
+              Setelah 4 sesi Pomodoro, ambil istirahat lebih panjang, sekitar
+              15-30 menit. Ini dapat membantu mengurangi rasa overwhelmed dan
+              memberi waktu untuk istirahat yang cukup.
+            </p>
+          </div>
+        </div>
+        <!-- Meditation -->
+        <div
+          class="flex flex-col md:flex-row md:gap-5 justify-center items-center mb-20"
+        >
+          <div
+            class="mb-10 md:mb-0 text-center md:text-end flex flex-col w-full lg:w-1/2"
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <h2 class="mb-5 text-2xl lg:text-3xl font-semibold">
+              Menerapkan
+              <span class="text-orange-400"
+                >Teknik<br />
+                Mindfulness</span
+              >
+              dan Meditasi
+            </h2>
+            <p class="text-gray-600 mb-3">
+              Untuk mengurangi stres dan kecemasan, mahasiswa IT bisa mencoba
+              teknik mindfulness atau meditasi. Luangkan waktu beberapa menit
+              setiap hari untuk fokus pada pernapasan dan menenangkan pikiran.
+            </p>
+            <p class="text-gray-600">
+              Teknik ini dapat membantu mengurangi perasaan tertekan dan
+              meningkatkan kesejahteraan mental.
+            </p>
+          </div>
+          <div
+            class="flex justify-center items-center w-full lg:w-1/2"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <img
+              src="./images/image-meditation.png"
+              class="drop-shadow-2xl"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- Music Player -->
+        <div
+          class="flex flex-col-reverse md:flex-row md:gap-5 justify-center items-center"
+        >
+          <div
+            class="flex justify-center flex-wrap w-full lg:w-1/2"
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div
+              class="music-player bg-white p-12 rounded-lg shadow-xl w-4/5 max-w-[25em]"
+            >
+              <button id="playlist" class="float-right">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <img id="song-image" src="make-me-move.jpg" class="w-full mt-5" />
+              <div class="song-details text-center">
+                <p id="song-name" class="text-xl font-semibold tracking-wider">
+                  Make Me Move
+                </p>
+                <p id="song-artist" class="text-sm">Culture Code</p>
+              </div>
+              <div
+                class="player-options flex items-center justify-between px-5 my-5"
+              >
+                <button id="shuffle" class="text-gray-500 text-base">
+                  <i class="fa-solid fa-shuffle"></i>
+                </button>
+                <button id="prev" class="text-[#16191e] text-xl">
+                  <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button
+                  id="play"
+                  class="h-10 w-10 text-white bg-[#2887e3] rounded-full text-2xl"
+                >
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <button
+                  id="pause"
+                  class="h-10 w-10 text-white bg-[#2887e3] rounded-full text-2xl hidden"
+                >
+                  <i class="fa-solid fa-pause"></i>
+                </button>
+                <button id="next" class="text-[#16191e] text-xl">
+                  <i class="fa-solid fa-forward-step"></i>
+                </button>
+                <button id="repeat" class="text-gray-400 text-base">
+                  <i class="fa-solid fa-repeat"></i>
+                </button>
+              </div>
+              <audio id="audio" preload="metadata"></audio>
+              <div
+                id="progress-bar"
+                class="relative w-full h-1 bg-[#eeeeee] rounded-lg cursor-pointer my-4"
+              >
+                <div
+                  id="current-progress"
+                  class="absolute top-0 left-0 h-full w-1/5 bg-[#2887e3] rounded-lg"
+                ></div>
+              </div>
+              <div
+                class="time-container flex items-center justify-between font-mono"
+              >
+                <span id="current-time" class="text-sm">0:00</span>
+                <span id="max-duration" class="text-sm">0:00</span>
+              </div>
+              <div
+                id="playlist-container"
+                class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full h-full p-8 rounded-xl"
+              >
+                <button
+                  id="close-button"
+                  class="absolute top-5 right-5 h-8 w-8 cursor-pointer"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <ul id="playlist-songs" class="list-none">
+                  <!-- Playlist songs will go here -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mb-10 md:mb-0 text-center md:text-start flex flex-col w-full lg:w-1/2"
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <h2 class="mb-5 text-2xl lg:text-3xl font-semibold">
+              Menggunakan
+              <span class="text-orange-400">Musik Relaksasi</span> untuk
+              Mengurangi Stres
+            </h2>
+            <p class="text-gray-600 mb-3">
+              Untuk mengatasi kekhawatiran dan stres, mahasiswa IT bisa mencoba
+              mendengarkan musik relaksasi atau suara alam saat belajar atau
+              bekerja. Ini dapat membantu menenangkan pikiran, mengurangi
+              kecemasan, dan meningkatkan fokus.
+            </p>
+            <p class="text-gray-600">
+              Musik dengan tempo lambat atau bunyi alam seperti hujan atau
+              gelombang laut bisa menjadi pilihan yang baik.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Solutions Section End -->
+
+    <!-- About Section Start  -->
+    <section id="about" class="px-4 sm:px-12 lg:px-32 py-12 bg-emerald-600">
+      <div
+        class="lg:max-w-screen-lg mx-auto flex flex-col md:flex-row justify-center items-center"
+      >
+        <div
+          class="mb-5 md:mb-0 flex justify-center items-center w-full md:w-1/2"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <img src="./images/image-about.png" class="w-2/3 lg:w-full" alt="" />
+        </div>
+        <div class="text-center md:text-start flex flex-col w-full md:w-1/2">
+          <span
+            class="mb-5 font-semibold text-white"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            >Tentang Kami</span
+          >
+          <h2
+            class="mb-5 text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:w-4/5"
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            Mendukung Kesehatan Mental
+            <span class="text-orange-400">Mahasiswa IT</span>
+          </h2>
+          <p
+            class="text-white"
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+          >
+            Kami adalah platform yang berkomitmen untuk mendukung kesehatan
+            mental mahasiswa IT. Dengan memahami tantangan unik yang dihadapi
+            oleh mahasiswa di bidang teknologi, kami menyediakan layanan
+            konsultasi dan sumber daya untuk membantu mengelola stres,
+            kecemasan, dan tantangan akademik.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End  -->
+
+    <!-- Services Section Start -->
+    <section class="px-4 sm:px-12 lg:px-32 py-12">
+      <div
+        class="lg:max-w-screen-xl mx-auto flex flex-col items-center justify-center min-h-screen"
+      >
+        <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
+          <h2
+            class="mb-5 font-semibold text-emerald-600"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Layanan
+          </h2>
+          <p
+            class="mb-5 text-2xl md:text-3xl lg:text-4xl font-semibold"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+          >
+            Kami Melayani Mahasiswa Kena Mental
+          </p>
+        </div>
+        <div
+          class="flex flex-wrap flex-col md:flex-row gap-5 justify-center items-center"
+        >
+          <div
+            class="max-w-sm flex flex-col items-center text-center border rounded-xl py-10 px-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <span
+              class="text-4xl h-20 w-20 flex justify-center items-center bg-emerald-600 rounded-full text-white mb-3"
+            >
+              <i class="fa-regular fa-user-headset"></i>
+            </span>
+            <h4 class="mb-5 font-bold">Konsultasi Pribadi</h4>
+            <p class="text-gray-600">
+              Sesi satu-satu dengan konselor profesional untuk membahas
+              tantangan mental dan emosional yang kamu hadapi, serta mendapatkan
+              strategi yang tepat untuk menghadapinya.
+            </p>
+          </div>
+          <div
+            class="max-w-sm flex flex-col items-center text-center border rounded-xl py-10 px-8"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <span
+              class="text-4xl h-20 w-20 flex justify-center items-center bg-emerald-600 rounded-full text-white mb-3"
+            >
+              <i class="fa-regular fa-people-roof"></i>
+            </span>
+            <h4 class="mb-5 font-bold">Workshop Manajemen Stres</h4>
+            <p class="text-gray-600">
+              Pelatihan praktis untuk mengelola stres akademik dan kehidupan
+              sehari-hari. Kami mengajarkan teknik relaksasi, perencanaan waktu,
+              dan cara menjaga keseimbangan hidup.
+            </p>
+          </div>
+          <div
+            class="max-w-sm flex flex-col items-center text-center border rounded-xl py-10 px-8"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <span
+              class="text-4xl h-20 w-20 flex justify-center items-center bg-emerald-600 rounded-full text-white mb-3"
+            >
+              <i class="fa-regular fa-signal-bars"></i>
+            </span>
+            <h4 class="mb-5 font-bold">Dukungan Kesehatan Mental Online</h4>
+            <p class="text-gray-600">
+              Layanan konsultasi online yang fleksibel, memungkinkan kamu
+              mendapatkan dukungan kapan saja dan di mana saja, tanpa harus
+              meninggalkan kenyamanan ruang kerja atau kamar kos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Testimonials Section Start -->
+    <section id="testimonials" class="px-4 sm:px-12 lg:px-32 py-12 bg-gray-100">
+      <div
+        id="indicators-carousel"
+        class="relative overflow-hidden w-full min-h-screen"
+        data-carousel="static"
+      >
+        <!-- Carousel wrapper -->
+        <div
+          class="relative"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+        >
+          <!-- Item 1 -->
+          <div
+            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+            data-carousel-item="active"
+          >
+            <div
+              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            >
+              <figure class="mx-auto w-4/5 lg:w-full">
+                <svg
+                  class="h-12 mx-auto mb-3 text-emerald-400"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
+                    "Sejak menggunakan Mindfulcare, saya merasa lebih tenang
+                    dalam menghadapi tugas-tugas kuliah yang menumpuk. Fitur
+                    meditasi terguidnya sangat membantu saya mengelola stres dan
+                    meningkatkan fokus. Saya jadi lebih produktif dan bisa
+                    menikmati proses belajar dengan lebih baik."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex flex-col items-center justify-center mt-10 space-x-3"
+                >
+                  <img
+                    class="w-10 h-10 rounded-full mb-5"
+                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                    alt="profile picture"
+                  />
+                  <div class="flex flex-col items-center">
+                    <h5 class="mb-1 text-2xl font-medium">Ahmad Rifai</h5>
+                    <p class="text-sm font-light text-gray-400">
+                      Teknik Informatika
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div
+              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            >
+              <figure class="mx-auto w-4/5 lg:w-full">
+                <svg
+                  class="h-12 mx-auto mb-3 text-emerald-400"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
+                    "Dulu, saya sering merasa overwhelmed dengan banyaknya
+                    informasi yang harus saya proses setiap hari. Berkat
+                    Mindfulcare, saya belajar untuk lebih hadir di momen
+                    sekarang dan tidak terlalu larut dalam pikiran negatif.
+                    Kecemasan saya berkurang, dan saya jadi lebih percaya diri
+                    dalam presentasi."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex flex-col items-center justify-center mt-10 space-x-3"
+                >
+                  <img
+                    class="w-10 h-10 rounded-full mb-5"
+                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                    alt="profile picture"
+                  />
+                  <div class="flex flex-col items-center">
+                    <h5 class="mb-1 text-2xl font-medium">Putri Ayu</h5>
+                    <p class="text-sm font-light text-gray-400">
+                      Sistem Informasi
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div
+              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            >
+              <figure class="mx-auto w-4/5 lg:w-full">
+                <svg
+                  class="h-12 mx-auto mb-3 text-emerald-400"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
+                    "Sebagai mahasiswa IT, saya seringkali duduk berjam-jam di
+                    depan komputer. Mindfulcare mengingatkan saya untuk
+                    sering-sering istirahat dan melakukan peregangan. Fitur
+                    mindfulness-based stress reduction (MBSR) juga sangat
+                    bermanfaat untuk menjaga keseimbangan emosional saya."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex flex-col items-center justify-center mt-10 space-x-3"
+                >
+                  <img
+                    class="w-10 h-10 rounded-full mb-5"
+                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                    alt="profile picture"
+                  />
+                  <div class="flex flex-col items-center">
+                    <h5 class="mb-1 text-2xl font-medium">Bagas Pradana</h5>
+                    <p class="text-sm font-light text-gray-400">
+                      Ilmu Komputer
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div
+            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div
+              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            >
+              <figure class="mx-auto w-4/5 lg:w-full">
+                <svg
+                  class="h-12 mx-auto mb-3 text-emerald-400"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
+                    "Saya suka fitur komunitas di Mindfulcare. Bisa berbagi
+                    pengalaman dengan teman-teman sesama mahasiswa yang juga
+                    sedang berjuang menjaga kesehatan mental membuat saya merasa
+                    tidak sendirian. Dukungan dari komunitas ini sangat berarti
+                    bagi saya."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex flex-col items-center justify-center mt-10 space-x-3"
+                >
+                  <img
+                    class="w-10 h-10 rounded-full mb-5"
+                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                    alt="profile picture"
+                  />
+                  <div class="flex flex-col items-center">
+                    <h5 class="mb-1 text-2xl font-medium">Salsabila</h5>
+                    <p class="text-sm font-light text-gray-400">
+                      Teknik Komputer
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div
+            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+            data-carousel-item
+          >
+            <div
+              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            >
+              <figure class="mx-auto w-4/5 lg:w-full">
+                <svg
+                  class="h-12 mx-auto mb-3 text-emerald-400"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
+                    "Mindfulcare telah menjadi bagian penting dari rutinitas
+                    harian saya. Fitur-fitur di dalamnya sangat lengkap, mulai
+                    dari meditasi, yoga, hingga artikel tentang kesehatan
+                    mental. Saya merasa lebih bahagia dan lebih siap menghadapi
+                    tantangan kuliah."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex flex-col items-center justify-center mt-10 space-x-3"
+                >
+                  <img
+                    class="w-10 h-10 rounded-full mb-5"
+                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                    alt="profile picture"
+                  />
+                  <div class="flex flex-col items-center">
+                    <h5 class="mb-1 text-2xl font-medium">Iqbal Ramadhan</h5>
+                    <p class="text-sm font-light text-gray-400">
+                      Sistem Informasi
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex md:hidden -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-0 left-1/2"
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 start-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-aos-duration="1000"
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 group-hover:bg-emerald-200 group-focus:ring-4 group-focus:ring-emerald-300 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-emerald-400 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 end-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+          data-aos="fade-up"
+          data-aos-delay="900"
+          data-aos-duration="1000"
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 group-hover:bg-emerald-200 group-focus:ring-4 group-focus:ring-emerald-300 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-emerald-400 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+    </section>
+    <!-- Testimonials Section Start -->
+
+    <!-- Blogs Section Start -->
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2
+            class="text-pretty text-4xl font-semibold tracking-tight text-gray-900"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            From the blog
+          </h2>
+          <p
+            class="mt-2 text-gray-600"
+            data-aos="fade-right"
+            data-aos-duration="1100"
+          >
+            Learn how to grow your business with our expert advice.
+          </p>
+        </div>
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 mt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+        >
+          <!-- Blog 1 -->
+          <article
+            class="flex max-w-xl flex-col items-start justify-between"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              class="aspect-video object-cover mb-3 rounded-xl"
+              alt=""
+            />
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2020-03-16" class="text-gray-500"
+                >26 Oktober 2023</time
+              >
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                >Edukasi</a
+              >
+            </div>
+            <div class="group relative">
+              <h3
+                class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
+              >
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Mengatasi Burnout di Jurusan TI: Tips Praktis untuk Mahasiswa
+                </a>
+              </h3>
+            </div>
+            <div class="relative mt-4 flex items-center gap-x-4">
+              <img
+                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+                class="size-10 rounded-full bg-gray-50"
+              />
+              <div class="text-sm/6">
+                <p class="font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Budi Santoso
+                  </a>
+                </p>
+                <p class="text-gray-600">
+                  Mahasiswa Teknik Informatika, Angkatan 2021
+                </p>
+              </div>
+            </div>
+          </article>
+          <!-- Blog 2 -->
+          <article
+            class="flex max-w-xl flex-col items-start justify-between"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              class="aspect-video object-cover mb-3 rounded-xl"
+              alt=""
+            />
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2020-03-16" class="text-gray-500"
+                >2 November 2023</time
+              >
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                >Edukasi</a
+              >
+            </div>
+            <div class="group relative">
+              <h3
+                class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
+              >
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Tekanan Deadline dan Kesehatan Mental Mahasiswa TI
+                </a>
+              </h3>
+            </div>
+            <div class="relative mt-4 flex items-center gap-x-4">
+              <img
+                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+                class="size-10 rounded-full bg-gray-50"
+              />
+              <div class="text-sm/6">
+                <p class="font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Siti Aminah, M.Kom.
+                  </a>
+                </p>
+                <p class="text-gray-600">Dosen Psikologi Komputasi</p>
+              </div>
+            </div>
+          </article>
+          <!-- Blog 3 -->
+          <article
+            class="flex max-w-xl flex-col items-start justify-between"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              class="aspect-video object-cover mb-3 rounded-xl"
+              alt=""
+            />
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2020-03-16" class="text-gray-500"
+                >9 November 2023</time
+              >
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                >Edukasi</a
+              >
+            </div>
+            <div class="group relative">
+              <h3
+                class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
+              >
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Menjaga Keseimbangan Hidup Kuliah dan Sosial bagi Mahasiswa TI
+                </a>
+              </h3>
+            </div>
+            <div class="relative mt-4 flex items-center gap-x-4">
+              <img
+                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+                class="size-10 rounded-full bg-gray-50"
+              />
+              <div class="text-sm/6">
+                <p class="font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Ahmad Rizki
+                  </a>
+                </p>
+                <p class="text-gray-600">Ketua HIMATI Periode 2023/2024</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- Blogs Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="bg-emerald-600">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center mb-5">
+              <img
+                src="./images/logo-icon-white.png"
+                class="h-8 me-3"
+                alt="FlowBite Logo"
+              />
+              <span
+                class="self-center text-white text-xl font-medium whitespace-nowrap"
+                >Mindfulcare</span
+              >
+            </a>
+            <p class="text-white sm:w-2/3 lg:w-1/2">
+              Platform untuk mendukung kesehatan mental mahasiswa IT dengan
+              menawarkan konseling online, program mindfulness, dan sumber daya
+              edukasi.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Resources
+              </h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a href="https://flowbite.com/" class="hover:underline"
+                    >Mindfulcare</a
+                  >
+                </li>
+                <li>
+                  <a href="https://tailwindcss.com/" class="hover:underline"
+                    >Tailwind CSS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Follow us
+              </h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://github.com/themesberg/flowbite"
+                    class="hover:underline"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://discord.gg/4eeurUVvTy"
+                    class="hover:underline"
+                    >Discord</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Legal
+              </h2>
+              <ul class="text-white font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-white sm:text-center"
+            >© 2024 <a href="#" class="hover:underline">Mindfulcare</a>. All
+            Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="#" class="text-white hover:text-gray-900">
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-white hover:text-gray-900 ms-5">
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
+              >
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <a href="#" class="text-white hover:text-gray-900 ms-5">
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-white hover:text-gray-900 ms-5">
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a href="#" class="text-white hover:text-gray-900 ms-5">
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Flowbite Script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Pomodoro Script -->
+    <script>
+      let focusButton = document.getElementById("focus");
+      let buttons = document.querySelectorAll(".btn");
+      let shortBreakButton = document.getElementById("shortbreak");
+      let longBreakButton = document.getElementById("longbreak");
+      let startBtn = document.getElementById("btn-start");
+      let reset = document.getElementById("btn-reset");
+      let pause = document.getElementById("btn-pause");
+      let time = document.getElementById("time");
+      let set;
+      let active = "focus";
+      let count = 59;
+      let paused = true;
+      let minCount = 24;
+      time.textContent = `${minCount + 1}:00`;
+      let alarmSound = new Audio("./music/critical-alarm-1004.wav");
+
+      const appendZero = (value) => {
+        value = value < 10 ? `0${value}` : value;
+        return value;
+      };
+
+      reset.addEventListener(
+        "click",
+        (resetTime = () => {
+          pauseTimer();
+          switch (active) {
+            case "long":
+              minCount = 14;
+              break;
+            case "short":
+              minCount = 4;
+              break;
+            default:
+              minCount = 24;
+              break;
+          }
+          count = 59;
+          time.textContent = `${minCount + 1}:00`;
+          document.title = `Pomodoro Timer - ${minCount + 1}:00`;
+        })
+      );
+
+      const removeFocus = () => {
+        buttons.forEach((btn) => {
+          btn.classList.remove("btn-focus");
+        });
+      };
+
+      focusButton.addEventListener("click", () => {
+        removeFocus();
+        focusButton.classList.add("btn-focus");
+        pauseTimer();
+        minCount = 24;
+        count = 59;
+        time.textContent = `${minCount + 1}:00`;
+        document.title = `Pomodoro Timer - ${minCount + 1}:00`;
+      });
+
+      shortBreakButton.addEventListener("click", () => {
+        active = "short";
+        removeFocus();
+        shortBreakButton.classList.add("btn-focus");
+        pauseTimer();
+        minCount = 4;
+        count = 59;
+        time.textContent = `${appendZero(minCount + 1)}:00`;
+        document.title = `Pomodoro Timer - ${appendZero(minCount + 1)}:00`;
+      });
+
+      longBreakButton.addEventListener("click", () => {
+        active = "long";
+        removeFocus();
+        longBreakButton.classList.add("btn-focus");
+        pauseTimer();
+        minCount = 14;
+        count = 59;
+        time.textContent = `${minCount + 1}:00`;
+        document.title = `Pomodoro Timer - ${minCount + 1}:00`;
+      });
+
+      pause.addEventListener(
+        "click",
+        (pauseTimer = () => {
+          paused = true;
+          clearInterval(set);
+          startBtn.classList.remove("hide");
+          pause.classList.remove("show");
+          reset.classList.remove("show");
+          document.title = `Pomodoro Timer - Paused`;
+        })
+      );
+
+      startBtn.addEventListener("click", () => {
+        reset.classList.add("show");
+        pause.classList.add("show");
+        startBtn.classList.add("hide");
+        startBtn.classList.remove("show");
+        if (paused) {
+          paused = false;
+          time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+          document.title = `Pomodoro Timer - ${appendZero(
+            minCount
+          )}:${appendZero(count)}`;
+
+          set = setInterval(() => {
+            count--;
+            time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+            document.title = `Pomodoro Timer - ${appendZero(
+              minCount
+            )}:${appendZero(count)}`;
+
+            if (count == 0) {
+              if (minCount != 0) {
+                minCount--;
+                count = 60;
+              } else {
+                clearInterval(set);
+                document.title = `Pomodoro Timer - Done!`;
+                alarmSound.play();
+              }
+            }
+          }, 1000);
+        }
+      });
+    </script>
+  </body>
+</html>
