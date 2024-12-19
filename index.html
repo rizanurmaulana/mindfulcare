@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,8 +29,7 @@
         font-family: "Inter", sans-serif;
         margin: 0;
         padding: 0;
-        width: 100%;
-        scroll-behavior: smooth;
+        box-sizing: border-box;
       }
       body::-webkit-scrollbar {
         display: none;
@@ -56,18 +55,102 @@
       }
     </style>
   </head>
-  <body>
-    <!-- Hero Section Start -->
-    <section
-      id="hero"
-      class="px-4 sm:px-12 lg:px-32 py-12 sm:py-4 md:py-0 relative"
-    >
-      <div
-        class="lg:max-w-screen-lg mx-auto w-full flex flex-wrap flex-col-reverse md:flex-row items-center justify-center min-h-screen"
-      >
+  <body class="overflow-x-hidden">
+    <!-- Navbar Section Start -->
+    <header class="fixed z-50 w-full">
+      <nav class="bg-white border-gray-200">
         <div
-          class="w-full text-center md:text-start md:w-1/2 flex flex-col justify-center md:min-h-screen"
+          class="xl:max-w-screen-2xl mx-auto flex flex-wrap items-center justify-between mx-auto p-4 sm:px-12 lg:px-32"
         >
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./images/logo-icon.png" class="h-8" alt="Logo" />
+            <span class="self-center text-xl font-medium whitespace-nowrap"
+              >Mindfulcare</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-normal flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="#home"
+                  class="block py-2 px-3 rounded hover:bg-emerald-600 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="block py-2 px-3 rounded hover:bg-emerald-600 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block py-2 px-3 rounded hover:bg-emerald-600 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0"
+                  >Layanan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="block py-2 px-3 rounded hover:bg-emerald-600 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0"
+                  >Testimoni</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blogs"
+                  class="block py-2 px-3 rounded hover:bg-emerald-600 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="block py-2 px-3 rounded hover:bg-emerald-600 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-emerald-600 md:p-0"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Navbar Section End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="w-full relative overflow-hidden">
+      <div
+        class="xl:max-w-screen-2xl mx-auto flex flex-col-reverse flex-wrap md:flex-row items-center justify-center md:justify-between mx-auto px-4 sm:px-12 lg:px-32 min-h-screen"
+      >
+        <div class="text-center md:text-start md:w-1/2">
           <h1
             class="mb-5 lg:mb-10 text-balancer text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900"
             data-aos="fade-up"
@@ -90,25 +173,25 @@
           </p>
           <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <a
-              href="#"
+              href="#introduction"
               class="text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-4 focus:outline-none focus:ring-emerald-400 font-medium rounded-xl hover:shadow-lg text-sm px-6 py-4 duration-500"
               >Mulai Sekarang</a
             >
           </div>
         </div>
         <div
-          class="w-full md:w-1/2 flex justify-center lg:items-center"
+          class="flex justify-center items-center md:w-1/2 relative overflow-hidden"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
           <img
             src="./images/image-hero.png"
-            alt="Gambar Hero"
-            class="mb-5 w-64 md:w-80 lg:w-auto h-auto"
+            class="w-56 md:w-full mb-10 md:mb-0 object-contain"
+            alt=""
           />
         </div>
       </div>
-      <div class="">
+      <div>
         <img
           src="./images/circle-1.png"
           class="absolute w-56 lg:w-auto top-20 -left-10 image-rotation-r"
@@ -123,10 +206,10 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Reasons Section Start -->
-    <section id="reasons" class="px-4 sm:px-12 lg:px-32 py-12">
+    <!-- Introduction Section Start -->
+    <section id="introduction" class="relative">
       <div
-        class="lg:max-w-screen-xl mx-auto flex flex-col items-center justify-center min-h-screen"
+        class="xl:max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-12 lg:px-32 py-24 min-h-screen"
       >
         <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
           <h2
@@ -134,17 +217,61 @@
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Alasan
+            Pengenalan
           </h2>
           <p
-            class="mb-5 text-2xl md:text-3xl lg:text-4xl font-semibold"
+            class="mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
             data-aos="fade-up"
             data-aos-duration="1100"
           >
-            Kenapa Sih Kamu Bisa Terkena Penyakit Mental
+            Apa Sih Kesehatan Mental Itu?
           </p>
         </div>
-        <div class="flex flex-wrap gap-5 lg:gap-10 justify-center items-center">
+        <div class="flex justify-center w-full">
+          <iframe
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            class="rounded-xl w-[720px] h-[250px] md:h-[315px] lg:h-[405px] bg-red-500"
+            src="https://www.youtube.com/embed/G0M41N1Lyw4?si=N6ols-nFQsviQPvK"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div
+        class="h-80 w-full bg-gradient-to-b from-emerald-400 to-emerald-600 absolute bottom-0 -z-10"
+      ></div>
+    </section>
+    <!-- Introduction Section End -->
+
+    <!-- Reasons Section Start -->
+    <section id="reasons">
+      <div
+        class="xl:max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-12 lg:px-32 py-24 min-h-screen"
+      >
+        <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
+          <h2
+            class="mb-5 font-semibold text-emerald-600"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Penyebab
+          </h2>
+          <p
+            class="mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+          >
+            Apa yang Menyebabkan Kamu Mengalami Masalah Kesehatan Mental
+          </p>
+        </div>
+        <div
+          class="flex flex-wrap flex-col md:flex-row gap-5 justify-center items-center"
+        >
           <div
             class="max-w-sm min-h-64 flex flex-col border rounded-xl p-6 hover:shadow-2xl hover:bg-emerald-600 hover:text-white duration-500"
             data-aos="fade-up"
@@ -269,9 +396,9 @@
     <!-- Reasons Section End -->
 
     <!-- Solutions Section Start -->
-    <section id="solutions" class="px-4 sm:px-12 lg:px-32 py-12 mb-20">
+    <section id="solutions" class="overflow-x-hidden">
       <div
-        class="lg:max-w-screen-lg mx-auto flex flex-col items-center justify-center min-h-screen"
+        class="xl:max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-12 lg:px-32 py-12 mb-20 min-h-screen"
       >
         <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
           <h2
@@ -282,7 +409,7 @@
             Solusi
           </h2>
           <p
-            class="mb-5 text-2xl md:text-3xl lg:text-4xl font-semibold"
+            class="mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
             data-aos="fade-up"
             data-aos-duration="1100"
           >
@@ -382,10 +509,7 @@
           >
             <h2 class="mb-5 text-2xl lg:text-3xl font-semibold">
               Menerapkan
-              <span class="text-orange-400"
-                >Teknik<br />
-                Mindfulness</span
-              >
+              <span class="text-orange-400">Teknik Mindfulness</span>
               dan Meditasi
             </h2>
             <p class="text-gray-600 mb-3">
@@ -421,78 +545,15 @@
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            <div
-              class="music-player bg-white p-12 rounded-lg shadow-xl w-4/5 max-w-[25em]"
-            >
-              <button id="playlist" class="float-right">
-                <i class="fa-solid fa-angle-down"></i>
-              </button>
-              <img id="song-image" src="make-me-move.jpg" class="w-full mt-5" />
-              <div class="song-details text-center">
-                <p id="song-name" class="text-xl font-semibold tracking-wider">
-                  Make Me Move
-                </p>
-                <p id="song-artist" class="text-sm">Culture Code</p>
-              </div>
-              <div
-                class="player-options flex items-center justify-between px-5 my-5"
-              >
-                <button id="shuffle" class="text-gray-500 text-base">
-                  <i class="fa-solid fa-shuffle"></i>
-                </button>
-                <button id="prev" class="text-[#16191e] text-xl">
-                  <i class="fa-solid fa-backward-step"></i>
-                </button>
-                <button
-                  id="play"
-                  class="h-10 w-10 text-white bg-[#2887e3] rounded-full text-2xl"
-                >
-                  <i class="fa-solid fa-play"></i>
-                </button>
-                <button
-                  id="pause"
-                  class="h-10 w-10 text-white bg-[#2887e3] rounded-full text-2xl hidden"
-                >
-                  <i class="fa-solid fa-pause"></i>
-                </button>
-                <button id="next" class="text-[#16191e] text-xl">
-                  <i class="fa-solid fa-forward-step"></i>
-                </button>
-                <button id="repeat" class="text-gray-400 text-base">
-                  <i class="fa-solid fa-repeat"></i>
-                </button>
-              </div>
-              <audio id="audio" preload="metadata"></audio>
-              <div
-                id="progress-bar"
-                class="relative w-full h-1 bg-[#eeeeee] rounded-lg cursor-pointer my-4"
-              >
-                <div
-                  id="current-progress"
-                  class="absolute top-0 left-0 h-full w-1/5 bg-[#2887e3] rounded-lg"
-                ></div>
-              </div>
-              <div
-                class="time-container flex items-center justify-between font-mono"
-              >
-                <span id="current-time" class="text-sm">0:00</span>
-                <span id="max-duration" class="text-sm">0:00</span>
-              </div>
-              <div
-                id="playlist-container"
-                class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full h-full p-8 rounded-xl"
-              >
-                <button
-                  id="close-button"
-                  class="absolute top-5 right-5 h-8 w-8 cursor-pointer"
-                >
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-                <ul id="playlist-songs" class="list-none">
-                  <!-- Playlist songs will go here -->
-                </ul>
-              </div>
-            </div>
+            <iframe
+              class="rounded-xl shadow-xl w-full lg:w-[500px] h-[250px] md:h-[280px]"
+              src="https://www.youtube.com/embed/DXT9dF-WK-I?si=wMpMK0NO6a_9Hxgk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
           <div
             class="mb-10 md:mb-0 text-center md:text-start flex flex-col w-full lg:w-1/2"
@@ -522,9 +583,9 @@
     <!-- Solutions Section End -->
 
     <!-- About Section Start  -->
-    <section id="about" class="px-4 sm:px-12 lg:px-32 py-12 bg-emerald-600">
+    <section id="about" class="bg-emerald-600">
       <div
-        class="lg:max-w-screen-lg mx-auto flex flex-col md:flex-row justify-center items-center"
+        class="xl:max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 sm:px-12 lg:px-32 py-24 min-h-screen"
       >
         <div
           class="mb-5 md:mb-0 flex justify-center items-center w-full md:w-1/2"
@@ -532,7 +593,7 @@
           data-aos-delay="100"
           data-aos-duration="1000"
         >
-          <img src="./images/image-about.png" class="w-2/3 lg:w-full" alt="" />
+          <img src="./images/image-about.png" class="w-2/3 lg:w-auto" alt="" />
         </div>
         <div class="text-center md:text-start flex flex-col w-full md:w-1/2">
           <span
@@ -569,9 +630,9 @@
     <!-- About Section End  -->
 
     <!-- Services Section Start -->
-    <section class="px-4 sm:px-12 lg:px-32 py-12">
+    <section id="services">
       <div
-        class="lg:max-w-screen-xl mx-auto flex flex-col items-center justify-center min-h-screen"
+        class="xl:max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-12 lg:px-32 py-24 min-h-screen"
       >
         <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
           <h2
@@ -582,11 +643,12 @@
             Layanan
           </h2>
           <p
-            class="mb-5 text-2xl md:text-3xl lg:text-4xl font-semibold"
+            class="mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
             data-aos="fade-up"
             data-aos-duration="1100"
           >
-            Kami Melayani Mahasiswa Kena Mental
+            Kami Menyediakan Dukungan untuk Mahasiswa dengan Masalah Kesehatan
+            Mental
           </p>
         </div>
         <div
@@ -652,390 +714,388 @@
     <!-- Services Section End -->
 
     <!-- Testimonials Section Start -->
-    <section id="testimonials" class="px-4 sm:px-12 lg:px-32 py-12 bg-gray-100">
-      <div
-        id="indicators-carousel"
-        class="relative overflow-hidden w-full min-h-screen"
-        data-carousel="static"
-      >
-        <!-- Carousel wrapper -->
+    <section id="testimonials" class="bg-gray-100">
+      <div class="xl:max-w-screen-2xl mx-auto px-4 sm:px-12 lg:px-32 py-12">
         <div
-          class="relative"
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-duration="1000"
+          id="indicators-carousel"
+          class="relative overflow-hidden w-full min-h-screen"
+          data-carousel="static"
         >
-          <!-- Item 1 -->
+          <!-- Carousel wrapper -->
           <div
-            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
-            data-carousel-item="active"
+            class="relative"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
           >
+            <!-- Item 1 -->
             <div
-              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+              class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+              data-carousel-item="active"
             >
-              <figure class="mx-auto w-4/5 lg:w-full">
-                <svg
-                  class="h-12 mx-auto mb-3 text-emerald-400"
-                  viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <blockquote>
-                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
-                    "Sejak menggunakan Mindfulcare, saya merasa lebih tenang
-                    dalam menghadapi tugas-tugas kuliah yang menumpuk. Fitur
-                    meditasi terguidnya sangat membantu saya mengelola stres dan
-                    meningkatkan fokus. Saya jadi lebih produktif dan bisa
-                    menikmati proses belajar dengan lebih baik."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex flex-col items-center justify-center mt-10 space-x-3"
-                >
-                  <img
-                    class="w-10 h-10 rounded-full mb-5"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div class="flex flex-col items-center">
-                    <h5 class="mb-1 text-2xl font-medium">Ahmad Rifai</h5>
-                    <p class="text-sm font-light text-gray-400">
-                      Teknik Informatika
+              <div
+                class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+              >
+                <figure class="mx-auto w-4/5 lg:w-full">
+                  <svg
+                    class="h-12 mx-auto mb-3 text-emerald-400"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <blockquote>
+                    <p class="text-md md:text-2xl lg:text-3xl font-medium">
+                      "Sejak menggunakan Mindfulcare, saya merasa lebih tenang
+                      dalam menghadapi tugas-tugas kuliah yang menumpuk. Fitur
+                      meditasi terguidnya sangat membantu saya mengelola stres
+                      dan meningkatkan fokus. Saya jadi lebih produktif dan bisa
+                      menikmati proses belajar dengan lebih baik."
                     </p>
-                  </div>
-                </figcaption>
-              </figure>
+                  </blockquote>
+                  <figcaption
+                    class="flex flex-col items-center justify-center mt-10 space-x-3"
+                  >
+                    <img
+                      class="w-10 h-10 rounded-full mb-5"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                      alt="profile picture"
+                    />
+                    <div class="flex flex-col items-center">
+                      <h5 class="mb-1 text-2xl font-medium">Ahmad Rifai</h5>
+                      <p class="text-sm font-light text-gray-400">
+                        Teknik Informatika
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div
+              class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+              data-carousel-item
+            >
+              <div
+                class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+              >
+                <figure class="mx-auto w-4/5 lg:w-full">
+                  <svg
+                    class="h-12 mx-auto mb-3 text-emerald-400"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <blockquote>
+                    <p class="text-md md:text-2xl lg:text-3xl font-medium">
+                      "Dulu, saya sering merasa overwhelmed dengan banyaknya
+                      informasi yang harus saya proses setiap hari. Berkat
+                      Mindfulcare, saya belajar untuk lebih hadir di momen
+                      sekarang dan tidak terlalu larut dalam pikiran negatif.
+                      Kecemasan saya berkurang, dan saya jadi lebih percaya diri
+                      dalam presentasi."
+                    </p>
+                  </blockquote>
+                  <figcaption
+                    class="flex flex-col items-center justify-center mt-10 space-x-3"
+                  >
+                    <img
+                      class="w-10 h-10 rounded-full mb-5"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                      alt="profile picture"
+                    />
+                    <div class="flex flex-col items-center">
+                      <h5 class="mb-1 text-2xl font-medium">Putri Ayu</h5>
+                      <p class="text-sm font-light text-gray-400">
+                        Sistem Informasi
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div
+              class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+              data-carousel-item
+            >
+              <div
+                class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+              >
+                <figure class="mx-auto w-4/5 lg:w-full">
+                  <svg
+                    class="h-12 mx-auto mb-3 text-emerald-400"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <blockquote>
+                    <p class="text-md md:text-2xl lg:text-3xl font-medium">
+                      "Sebagai mahasiswa IT, saya seringkali duduk berjam-jam di
+                      depan komputer. Mindfulcare mengingatkan saya untuk
+                      sering-sering istirahat dan melakukan peregangan. Fitur
+                      mindfulness-based stress reduction (MBSR) juga sangat
+                      bermanfaat untuk menjaga keseimbangan emosional saya."
+                    </p>
+                  </blockquote>
+                  <figcaption
+                    class="flex flex-col items-center justify-center mt-10 space-x-3"
+                  >
+                    <img
+                      class="w-10 h-10 rounded-full mb-5"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                      alt="profile picture"
+                    />
+                    <div class="flex flex-col items-center">
+                      <h5 class="mb-1 text-2xl font-medium">Bagas Pradana</h5>
+                      <p class="text-sm font-light text-gray-400">
+                        Ilmu Komputer
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div
+              class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+              data-carousel-item
+            >
+              <div
+                class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+              >
+                <figure class="mx-auto w-4/5 lg:w-full">
+                  <svg
+                    class="h-12 mx-auto mb-3 text-emerald-400"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <blockquote>
+                    <p class="text-md md:text-2xl lg:text-3xl font-medium">
+                      "Saya suka fitur komunitas di Mindfulcare. Bisa berbagi
+                      pengalaman dengan teman-teman sesama mahasiswa yang juga
+                      sedang berjuang menjaga kesehatan mental membuat saya
+                      merasa tidak sendirian. Dukungan dari komunitas ini sangat
+                      berarti bagi saya."
+                    </p>
+                  </blockquote>
+                  <figcaption
+                    class="flex flex-col items-center justify-center mt-10 space-x-3"
+                  >
+                    <img
+                      class="w-10 h-10 rounded-full mb-5"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                      alt="profile picture"
+                    />
+                    <div class="flex flex-col items-center">
+                      <h5 class="mb-1 text-2xl font-medium">Salsabila</h5>
+                      <p class="text-sm font-light text-gray-400">
+                        Teknik Komputer
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div
+              class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
+              data-carousel-item
+            >
+              <div
+                class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+              >
+                <figure class="mx-auto w-4/5 lg:w-full">
+                  <svg
+                    class="h-12 mx-auto mb-3 text-emerald-400"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <blockquote>
+                    <p class="text-md md:text-2xl lg:text-3xl font-medium">
+                      "Mindfulcare telah menjadi bagian penting dari rutinitas
+                      harian saya. Fitur-fitur di dalamnya sangat lengkap, mulai
+                      dari meditasi, yoga, hingga artikel tentang kesehatan
+                      mental. Saya merasa lebih bahagia dan lebih siap
+                      menghadapi tantangan kuliah."
+                    </p>
+                  </blockquote>
+                  <figcaption
+                    class="flex flex-col items-center justify-center mt-10 space-x-3"
+                  >
+                    <img
+                      class="w-10 h-10 rounded-full mb-5"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                      alt="profile picture"
+                    />
+                    <div class="flex flex-col items-center">
+                      <h5 class="mb-1 text-2xl font-medium">Iqbal Ramadhan</h5>
+                      <p class="text-sm font-light text-gray-400">
+                        Sistem Informasi
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
-          <!-- Item 2 -->
           <div
-            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
-            data-carousel-item
+            class="absolute z-30 flex md:hidden -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-10 left-1/2"
           >
-            <div
-              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
-            >
-              <figure class="mx-auto w-4/5 lg:w-full">
-                <svg
-                  class="h-12 mx-auto mb-3 text-emerald-400"
-                  viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <blockquote>
-                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
-                    "Dulu, saya sering merasa overwhelmed dengan banyaknya
-                    informasi yang harus saya proses setiap hari. Berkat
-                    Mindfulcare, saya belajar untuk lebih hadir di momen
-                    sekarang dan tidak terlalu larut dalam pikiran negatif.
-                    Kecemasan saya berkurang, dan saya jadi lebih percaya diri
-                    dalam presentasi."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex flex-col items-center justify-center mt-10 space-x-3"
-                >
-                  <img
-                    class="w-10 h-10 rounded-full mb-5"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div class="flex flex-col items-center">
-                    <h5 class="mb-1 text-2xl font-medium">Putri Ayu</h5>
-                    <p class="text-sm font-light text-gray-400">
-                      Sistem Informasi
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"
+            ></button>
           </div>
-          <!-- Item 3 -->
-          <div
-            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
-            data-carousel-item
+          <button
+            type="button"
+            class="absolute top-0 start-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+            data-aos="fade-up"
+            data-aos-delay="800"
+            data-aos-duration="1000"
           >
-            <div
-              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 group-hover:bg-emerald-200 group-focus:ring-4 group-focus:ring-emerald-300 group-focus:outline-none"
             >
-              <figure class="mx-auto w-4/5 lg:w-full">
-                <svg
-                  class="h-12 mx-auto mb-3 text-emerald-400"
-                  viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <blockquote>
-                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
-                    "Sebagai mahasiswa IT, saya seringkali duduk berjam-jam di
-                    depan komputer. Mindfulcare mengingatkan saya untuk
-                    sering-sering istirahat dan melakukan peregangan. Fitur
-                    mindfulness-based stress reduction (MBSR) juga sangat
-                    bermanfaat untuk menjaga keseimbangan emosional saya."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex flex-col items-center justify-center mt-10 space-x-3"
-                >
-                  <img
-                    class="w-10 h-10 rounded-full mb-5"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div class="flex flex-col items-center">
-                    <h5 class="mb-1 text-2xl font-medium">Bagas Pradana</h5>
-                    <p class="text-sm font-light text-gray-400">
-                      Ilmu Komputer
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <!-- Item 4 -->
-          <div
-            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
-            data-carousel-item
+              <svg
+                class="w-4 h-4 text-emerald-400 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="absolute top-0 end-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+            data-aos="fade-up"
+            data-aos-delay="900"
+            data-aos-duration="1000"
           >
-            <div
-              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 group-hover:bg-emerald-200 group-focus:ring-4 group-focus:ring-emerald-300 group-focus:outline-none"
             >
-              <figure class="mx-auto w-4/5 lg:w-full">
-                <svg
-                  class="h-12 mx-auto mb-3 text-emerald-400"
-                  viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <blockquote>
-                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
-                    "Saya suka fitur komunitas di Mindfulcare. Bisa berbagi
-                    pengalaman dengan teman-teman sesama mahasiswa yang juga
-                    sedang berjuang menjaga kesehatan mental membuat saya merasa
-                    tidak sendirian. Dukungan dari komunitas ini sangat berarti
-                    bagi saya."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex flex-col items-center justify-center mt-10 space-x-3"
-                >
-                  <img
-                    class="w-10 h-10 rounded-full mb-5"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div class="flex flex-col items-center">
-                    <h5 class="mb-1 text-2xl font-medium">Salsabila</h5>
-                    <p class="text-sm font-light text-gray-400">
-                      Teknik Komputer
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <!-- Item 5 -->
-          <div
-            class="hidden flex justify-center items-center min-h-screen duration-700 ease-in-out"
-            data-carousel-item
-          >
-            <div
-              class="max-w-sm md:max-w-screen-md lg:max-w-screen-lg text-center"
-            >
-              <figure class="mx-auto w-4/5 lg:w-full">
-                <svg
-                  class="h-12 mx-auto mb-3 text-emerald-400"
-                  viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <blockquote>
-                  <p class="text-xl md:text-2xl lg:text-3xl font-medium">
-                    "Mindfulcare telah menjadi bagian penting dari rutinitas
-                    harian saya. Fitur-fitur di dalamnya sangat lengkap, mulai
-                    dari meditasi, yoga, hingga artikel tentang kesehatan
-                    mental. Saya merasa lebih bahagia dan lebih siap menghadapi
-                    tantangan kuliah."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex flex-col items-center justify-center mt-10 space-x-3"
-                >
-                  <img
-                    class="w-10 h-10 rounded-full mb-5"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div class="flex flex-col items-center">
-                    <h5 class="mb-1 text-2xl font-medium">Iqbal Ramadhan</h5>
-                    <p class="text-sm font-light text-gray-400">
-                      Sistem Informasi
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+              <svg
+                class="w-4 h-4 text-emerald-400 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
         </div>
-        <!-- Slider indicators -->
-        <div
-          class="absolute z-30 flex md:hidden -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-0 left-1/2"
-        >
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 5"
-            data-carousel-slide-to="4"
-          ></button>
-        </div>
-        <!-- Slider controls -->
-        <button
-          type="button"
-          class="absolute top-0 start-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-          data-aos="fade-up"
-          data-aos-delay="800"
-          data-aos-duration="1000"
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 group-hover:bg-emerald-200 group-focus:ring-4 group-focus:ring-emerald-300 group-focus:outline-none"
-          >
-            <svg
-              class="w-4 h-4 text-emerald-400 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          class="absolute top-0 end-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-          data-aos="fade-up"
-          data-aos-delay="900"
-          data-aos-duration="1000"
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 group-hover:bg-emerald-200 group-focus:ring-4 group-focus:ring-emerald-300 group-focus:outline-none"
-          >
-            <svg
-              class="w-4 h-4 text-emerald-400 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button>
       </div>
     </section>
     <!-- Testimonials Section Start -->
 
     <!-- Blogs Section Start -->
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0">
+    <section id="blogs">
+      <div
+        class="xl:max-w-screen-2xl mx-auto flex flex-col items-center justify-center px-4 sm:px-12 lg:px-32 py-24 min-h-screen"
+      >
+        <div class="mb-5 lg:mb-10 mx-auto md:max-w-screen-md text-center">
           <h2
-            class="text-pretty text-4xl font-semibold tracking-tight text-gray-900"
-            data-aos="fade-right"
+            class="mb-5 font-semibold text-emerald-600"
+            data-aos="fade-up"
             data-aos-duration="1000"
           >
-            From the blog
+            Blog
           </h2>
           <p
-            class="mt-2 text-gray-600"
-            data-aos="fade-right"
+            class="mb-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
+            data-aos="fade-up"
             data-aos-duration="1100"
           >
-            Learn how to grow your business with our expert advice.
+            Kumpulan Artikel yang Membahas Tentang Masalah Kesehatan Mental
           </p>
         </div>
         <div
-          class="mx-auto grid max-w-2xl grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 mt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          class="mx-auto flex flex-wrap justify-center items-center max-w-2xl gap-10 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
           <!-- Blog 1 -->
           <article
-            class="flex max-w-xl flex-col items-start justify-between"
+            class="flex max-w-sm flex-col items-start justify-between"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-duration="1000"
           >
             <img
-              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="./images/blog-1.jpg"
               class="aspect-video object-cover mb-3 rounded-xl"
               alt=""
             />
@@ -1080,13 +1140,13 @@
           </article>
           <!-- Blog 2 -->
           <article
-            class="flex max-w-xl flex-col items-start justify-between"
+            class="flex max-w-sm flex-col items-start justify-between"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1000"
           >
             <img
-              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="./images/blog-2.jpg"
               class="aspect-video object-cover mb-3 rounded-xl"
               alt=""
             />
@@ -1129,13 +1189,13 @@
           </article>
           <!-- Blog 3 -->
           <article
-            class="flex max-w-xl flex-col items-start justify-between"
+            class="flex max-w-sm flex-col items-start justify-between"
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="1000"
           >
             <img
-              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="./images/blog-3.jpg"
               class="aspect-video object-cover mb-3 rounded-xl"
               alt=""
             />
@@ -1178,12 +1238,42 @@
           </article>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Blogs Section End -->
+
+    <!-- Call To Action -->
+    <section id="contact">
+      <div class="xl:max-w-screen-2xl mx-auto px-4 sm:px-12 lg:px-32 py-24">
+        <div
+          class="flex items-center bg-emerald-600 rounded-xl h-72 relative overflow-hidden"
+        >
+          <div class="w-full md:w-1/2 px-10">
+            <h2 class="text-white text-3xl font-semibold mb-8">
+              Ayo Konsultasikan Kesehatan Mentalmu Sekarang Juga!
+            </h2>
+            <div>
+              <a
+                href="#"
+                class="text-white bg-emerald-400 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-emerald-400 font-medium rounded-xl hover:shadow-lg text-sm px-6 py-4 duration-500"
+                >Hubungi Kami</a
+              >
+            </div>
+          </div>
+          <div class="absolute right-0 bottom-0 h-72">
+            <img src="./images/asset-cta.png" class="h-full" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer Section Start -->
     <footer class="bg-emerald-600">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div
+        class="xl:max-w-screen-2xl mx-auto px-4 sm:px-12 lg:px-32 py-8 lg:py-10"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
             <a href="#" class="flex items-center mb-5">
@@ -1206,39 +1296,45 @@
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 class="mb-6 text-sm font-semibold text-white uppercase">
-                Resources
+                Services
               </h2>
               <ul class="text-white font-medium">
                 <li class="mb-4">
                   <a href="https://flowbite.com/" class="hover:underline"
-                    >Mindfulcare</a
+                    >Psychotherapy</a
                   >
                 </li>
-                <li>
+                <li class="mb-4">
                   <a href="https://tailwindcss.com/" class="hover:underline"
-                    >Tailwind CSS</a
+                    >Mental Counseling</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="https://tailwindcss.com/" class="hover:underline"
+                    >Support Group</a
                   >
                 </li>
               </ul>
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold text-white uppercase">
-                Follow us
+                Navigation
               </h2>
               <ul class="text-white font-medium">
                 <li class="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    class="hover:underline"
-                    >Github</a
-                  >
+                  <a href="#home" class="hover:underline">Beranda</a>
                 </li>
-                <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    class="hover:underline"
-                    >Discord</a
-                  >
+                <li class="mb-4">
+                  <a href="#about" class="hover:underline">Tentang Kami</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#services" class="hover:underline">Layanan</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#testimonials" class="hover:underline">Testimoni</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#blogs" class="hover:underline">Blog</a>
                 </li>
               </ul>
             </div>
@@ -1251,7 +1347,7 @@
                   <a href="#" class="hover:underline">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                  <a href="#" class="hover:underline">Terms of Use</a>
                 </li>
               </ul>
             </div>
@@ -1260,7 +1356,7 @@
         <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-white sm:text-center"
-            >© 2024 <a href="#" class="hover:underline">Mindfulcare</a>. All
+            >© 2024 <a href="#" class="hover:underline">Mindfulcare</a> by Spontan. All
             Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
@@ -1309,38 +1405,6 @@
                 />
               </svg>
               <span class="sr-only">Twitter page</span>
-            </a>
-            <a href="#" class="text-white hover:text-gray-900 ms-5">
-              <svg
-                class="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span class="sr-only">GitHub account</span>
-            </a>
-            <a href="#" class="text-white hover:text-gray-900 ms-5">
-              <svg
-                class="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span class="sr-only">Dribbble account</span>
             </a>
           </div>
         </div>
